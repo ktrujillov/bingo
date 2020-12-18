@@ -1,0 +1,61 @@
+body {
+    font-family: 'Langar', cursive;
+    font-size: 24px;
+    text-align: center;
+    justify-content: center;
+    font-weight: 400;
+    margin-top: 3%;
+    background: transparent;
+}
+table {
+    border-collapse: collapse;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    background-color: white;
+}
+
+table.table-bordered {
+    border:5px solid #fc035a;
+    border-width: 12px;
+}
+.card-header{
+    color: #fc035a;
+}
+
+#header-message{
+    background-color: #fc035a;
+    color: white;
+    font-size: 30px;
+}
+.table-bordered>:not(caption)>*>*{
+    border-width: 4px 4px;
+    border:5px solid #fc035a;
+}
+.b, .i, .n, .g, .o{
+
+    height: 84px;
+    width:54px;
+    vertical-align: middle;
+    padding: 0%;
+    
+}
+
+
+
+.card-container{
+    padding: 10px;
+    display: inline-block;
+    align-content: center;
+    text-align: center;
+
+}
+
+
+html { 
+    background: url(img.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
