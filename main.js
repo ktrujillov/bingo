@@ -17,14 +17,18 @@ function print() {
         alert("No se ha generado la cartilla")
         return
     }
-    let quality = 1 ;
+    let quality = 0.8;
     const filename  = 'cartilla.pdf';
 
     html2canvas(document.querySelector('.card-container'), 
                             {scale: quality}
                      ).then(canvas => {
-        let pdf = new jsPDF('p', 'mm', 'a4');
-        pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 40, 50);
+        let pdf = new jsPDF('l', 'mm', 'a5');
+        let width = pdf.internal.pageSize.width;
+        let height = pdf.internal.pageSize.height;
+        let marginh =86;
+        let marginv = 20;
+        pdf.addImage(canvas.toDataURL('image/png'), 'PNG', marginh/2, marginv/2, width-marginh, height-marginv);
         pdf.save(filename);
     });
 }
