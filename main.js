@@ -26,8 +26,8 @@ function print() {
         let pdf = new jsPDF('l', 'mm', 'a5');
         let width = pdf.internal.pageSize.width;
         let height = pdf.internal.pageSize.height;
-        let marginh =86;
-        let marginv = 20;
+        let marginh =90;
+        let marginv =12;
         pdf.addImage(canvas.toDataURL('image/png'), 'PNG', marginh/2, marginv/2, width-marginh, height-marginv);
         pdf.save(filename);
     });
